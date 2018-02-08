@@ -1,7 +1,9 @@
-import jsonpickle
 import sys
-from pathlib import Path
 from operator import itemgetter
+from pathlib import Path
+
+import jsonpickle
+
 from pseudocontig import Pseudocontig
 
 debug_core = sys.argv[1]
@@ -27,8 +29,8 @@ for match in result:
         if match['filtered']['type'] == 'shortHit':
             continue
 
-    if match['hitId'] in ('group_2012', 'lbpA'):  # Skip these families (to be removed)
-        continue
+    # if match['hitId'] in ('group_2012', 'lbpA'):  # Skip these families (to be removed)
+    #     continue
 
     if current.id == match['queryId']:
 
